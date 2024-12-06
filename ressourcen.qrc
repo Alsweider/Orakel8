@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/bilder">
+        <file>Kugel8.png</file>
+        <file>KugelDreieck.png</file>
+    </qresource>
+</RCC>
