@@ -71,9 +71,8 @@ void MainWindow::Anzeigen(){
     rotationTimer->stop();
     schuettelnTimer->stop();
 
-    QString labelText = QString("<span style='background-color: #274294; color: white;'>" + antworten[zufall] + "</span>");
+    QString labelText = QString("<span style='background-color: #274294; color: white;'>" + antworten[zufall] + "</span>").toUpper();
     ui->labelKugel->setText(labelText);
-    //ui->labelKugel->setText(antworten[zufall]);
     ui->pushButton->setEnabled(true);
     ui->pushButton->setText("Schütteln");
 
@@ -86,6 +85,6 @@ void MainWindow::Rotieren(){
     transform.rotate(angle);
     angle = (angle + 10) % 360;
 
-    QPixmap rotatedPixmap = kugelBild.transformed(transform, Qt::SmoothTransformation); // Transformation anwenden
-    ui->labelBild->setPixmap(rotatedPixmap); // Rotiertes Pixmap anzeigen
+    QPixmap rotatedPixmap = kugelBild.transformed(transform, Qt::SmoothTransformation);
+    ui->labelBild->setPixmap(rotatedPixmap);
 }
