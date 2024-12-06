@@ -94,7 +94,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift</family>
+      <family>Segoe UI</family>
       <pointsize>11</pointsize>
      </font>
     </property>

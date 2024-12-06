@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
     kugelBild = kugelBild.scaled(ui->labelBild->size(), Qt::KeepAspectRatio);
     kugelBildDreieck = kugelBildDreieck.scaled(ui->labelBild->size(), Qt::KeepAspectRatio);
 
-    // QPixmap kugelBildSkaliert = kugelBild.scaled(ui->labelBild->size(), Qt::KeepAspectRatio);
     ui->labelBild->setPixmap(kugelBild);
 
     schuettelnTimer = new QTimer(this);
@@ -52,7 +51,7 @@ void MainWindow::Anzeigen(){
               << "In höchstem Maße wahrscheinlich."
               << "Die Aussichten stehen gut."
               << "Jawohl."
-              << "Die Zeichen deuten auf Ja."
+              << "Die Zeichen weisen auf Ja."
               << "Antwort verschwommen, versucht es erneut."
               << "Fragt später abermals."
               << "Es ist besser, Euch dies noch nicht zu sagen."
@@ -72,6 +71,7 @@ void MainWindow::Anzeigen(){
     schuettelnTimer->stop();
 
     QString labelText = QString("<span style='background-color: #274294; color: white;'>" + antworten[zufall] + "</span>").toUpper();
+
     ui->labelKugel->setText(labelText);
     ui->pushButton->setEnabled(true);
     ui->pushButton->setText("Schütteln");
